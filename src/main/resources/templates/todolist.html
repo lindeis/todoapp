@@ -3,11 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" th:href="@{/style.css}"/>
+    <link href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"/>
     <title>Todo</title>
 </head>
 <body>
-<a href="/listofassignees">List of assignees</a>
+<button type="button" class="btn btn-link">List of Assignees</button>   
 <h1>Todos for today:</h1>
 <form method="post" action="/search">
     <label>Search:</label>
@@ -33,5 +33,7 @@
         <td><a th:href="'/deletetodo/' + ${todo.getId()}">Delete</a></td>
     </tr>
 </table>
+<script src="/webjars/jquery/3.3.1/jquery.min.js"></script>
+<script src="/webjars/bootstrap/4.3.1/js/bootstrap.bundle.js"></script>
 </body>
 </html>
